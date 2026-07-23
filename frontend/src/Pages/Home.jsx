@@ -1,26 +1,23 @@
 import { useState } from "react";
-import { Card } from "../Components/Card";
-import { Herosection } from "../Components/Herosection";
-import RandomProducts from "../Components/RandomProducts";
-import ProductCategoryTabs from "../Components/ProductCategoryTabs";
 
-const Home = () => {
+import ProductCategoryTabs from "../Components/ProductCategoryTabs";
+import {Card} from "../Components/Card";
+import {Herosection} from "../Components/Herosection";
+
+function Home() {
   const [selectedCategory, setSelectedCategory] = useState("");
 
   return (
     <>
-      {!selectedCategory && <Herosection />}
+      <Herosection />
 
       <ProductCategoryTabs
-        selectedCategory={selectedCategory}
         setSelectedCategory={setSelectedCategory}
       />
-
-      {!selectedCategory && <RandomProducts />}
 
       <Card selectedCategory={selectedCategory} />
     </>
   );
-};
+}
 
 export default Home;
