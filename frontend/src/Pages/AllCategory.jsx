@@ -1,28 +1,30 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
-import "./Card.css";
+import axios from 'axios';
+import {useState,useEffect} from 'react'
+import { useNavigate } from 'react-router-dom';
 
-export const Card = ({ selectedCategory }) => {
+
+const AllCategory = ({selectedCategory}) => {
   const [products, setProducts] = useState([]);
 
-  useEffect(() => {
+  const navigate = useNavigate();
+
+  useEffect(()=> {
     axios
       .get("http://localhost:3000/products")
-      .then((res) => setProducts(res.data))
-      .catch((err) => console.log(err));
+      .then((res) => {setProducts(res.data)})
+      .catch((err)=> console.log(err));
   }, []);
 
-  // Get unique categories
   const categories = [...new Set(products.map((item) => item.category))];
 
   return (
-    <>
-      {categories
+      <>
+          <button onClick={() => navigate("/")}>Go Back</button>
+        {categories
         .filter((category) =>
           selectedCategory ? category === selectedCategory : true
         )
         .map((category) => (
-          
           <div key={category}>
             <h1>{category}</h1>
 
@@ -50,6 +52,8 @@ export const Card = ({ selectedCategory }) => {
             </div>
           </div>
         ))}
-    </>
+      </>
   );
 };
+
+export default AllCategory;

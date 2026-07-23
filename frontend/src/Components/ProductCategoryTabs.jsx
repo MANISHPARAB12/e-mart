@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "../App.css"
 
 function ProductCategoryTabs() {
   const [categories, setCategories] = useState([]);
@@ -25,7 +26,7 @@ function ProductCategoryTabs() {
         {categories.slice(0, 4).map((category) => (
           <button
             key={category}
-            onClick={() => navigate(`/category/${category}`)}
+            onClick={() => navigate("/allCategory")}
           >
             {category}
           </button>
@@ -33,9 +34,11 @@ function ProductCategoryTabs() {
       </div>
 
       {categories.length > 4 && (
-        <button onClick={() => navigate("/categories")}>
+        <div className="viewallbtn">
+        <button onClick={() => navigate("/allCategory")} >
           View All
         </button>
+        </div>
       )}
     </div>
   );
