@@ -1,0 +1,73 @@
+
+/* hero section css */
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+.hero {
+    background-color: rgb(32, 88, 83);
+    height: 50vh;
+    display: flex;
+    /* justify-content: space-evenly; */
+    border-radius: 15px;
+    margin-right: 50px;
+    margin-left: 50px;
+    clip-path: ellipse(100% 100% at 50% 0%);
+}
+
+.h1-container {
+    color: white;
+    font-family: "Lexend", sans-serif;
+    line-height: 30px;
+}
+
+.p-container {
+    color: #ddd;
+    line-height: 5px;
+}
+
+.shop-btn{
+    height: 35px;
+    width: 120px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(162, 217, 98);
+    margin-top: 10px;
+}
+
+.heroimg {
+    height: 400px;
+    /* mix-blend-mode: multiply; */
+    background: transparent;
+    position: relative;
+}
+
+.left-container {
+    margin-left: 5rem;
+    margin-top: 2.5rem;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.right-container {
+    margin-left: 15rem;
+    margin-top:1rem;
+}
+
+/* hero section end*/
+
+/* product Category tab section css start */
+
+.container{
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    margin-top: 6.5rem;
+    /* margin: 10px; */
+}
+
+.category-container button {
+    height: 50px;
+    width: 100px;
+    margin: 10px;
+}
+
+/* product Category tab section css ends */
