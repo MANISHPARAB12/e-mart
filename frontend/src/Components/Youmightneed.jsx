@@ -3,25 +3,32 @@ import axios from "axios";
 import "./Card.css";
 import "../App.css"
 
-const RandomProducts = () => {
+const Youmightneed = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
     axios
       .get("http://localhost:3000/products")
       .then((res) => {
-        const randomProducts = [...res.data]
+        const Youmightneed = [...res.data]
           .sort(() => Math.random() - 0.5)
           .slice(0, 10);
 
-        setProducts(randomProducts);
+        setProducts(Youmightneed);
       })
       .catch((err) => console.log(err));
   }, []);
 
   return (
     <div className="random-products">
+      <div className="heading-container">
       <h2>You Might need</h2>
+      <div className="grp">
+      <p className="sm">See more</p>
+        <img src="https://img.icons8.com/?size=100&id=85563&format=png&color=000000" alt="" srcset="" className="rightarrow"/>
+      </div>
+      </div>
+        
 
       <div className="Card-container">
         {products.map((item) => (
@@ -45,4 +52,4 @@ const RandomProducts = () => {
   );
 };
 
-export default RandomProducts;
+export default Youmightneed;

@@ -63,21 +63,44 @@
     margin-top: 4rem;
     /* margin: 10px; */
     display: flex;
-    justify-content: space-center;
+    justify-content: space-center;   
 }
-
+.category-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
 .category-container button {
-    height: 80px;
-    width: 180px;
+    height: 100px;
+    width: 200px;
     margin: 10px;
 }
 
 .viewallbtn button {
     margin-top: 10px;
-    height: 80px;
-    width: 80px ;
+    height: 100px;
+    width: 100px ;
+    background-color: rgb(144, 246, 97);
+    border: none;
+    line-height: 30px;
 }
 
+
+
+.circle {
+    background-color: white;
+    height: 50px;
+    width: 30px;
+    border-radius: 60%;
+    margin-left: 15px;
+}
+.arrow {
+    width: 30px;
+    margin-top: 8px;
+    margin-left: -10px;
+}
 button p {
     margin-right: 80px;
     font-weight: bold;
@@ -93,7 +116,7 @@ button p {
 }
 /* product Category tab section css ends */
 
-/* you might like  */
+/* you might need css start  */
 
 .random-products {
     margin-top: 120px;
@@ -104,7 +127,16 @@ button p {
     font-family: "Lexend", sans-serif;
 }
 
-/* you might be like css end */
+.rightarrow {
+    height: 20px;
+    /* top: 10px; */
+}
+
+.sm {
+    margin-right: 10px;
+}
+
+/* you might need  css end */
 
 /* featured store css start */
    .div-container{

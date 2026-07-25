@@ -3,7 +3,7 @@ import { useState } from "react";
 import ProductCategoryTabs from "../Components/ProductCategoryTabs";
 // import {Card} from "../Components/Card";
 import {Herosection} from "../Components/Herosection";
-import RandomProducts from "../Components/RandomProducts";
+import Youmightneed from "../Components/Youmightneed";
 import FeatureStore from "../Components/FeaturedStore";
 
 
@@ -19,7 +19,7 @@ function Home() {
         setSelectedCategory={setSelectedCategory}
       />
       
-      <RandomProducts/>
+      <Youmightneed/>
 
       <FeatureStore/>
 

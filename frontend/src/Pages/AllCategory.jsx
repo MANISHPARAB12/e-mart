@@ -3,6 +3,7 @@ import {useState,useEffect} from 'react'
 import { useNavigate } from 'react-router-dom';
 
 
+
 const AllCategory = ({selectedCategory}) => {
   const [products, setProducts] = useState([]);
 
@@ -20,6 +21,8 @@ const AllCategory = ({selectedCategory}) => {
   return (
       <>
           <button onClick={() => navigate("/")}>Go Back</button>
+
+          
         {categories
         .filter((category) =>
           selectedCategory ? category === selectedCategory : true

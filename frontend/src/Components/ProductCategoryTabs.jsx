@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+
 import "../App.css"
 
 function ProductCategoryTabs() {
@@ -47,8 +48,11 @@ function ProductCategoryTabs() {
 
       {categories.length > 4 && (
         <div className="viewallbtn">
-        <button onClick={() => navigate("/allCategory")} >
-          View All
+        <button onClick={() => navigate("/allCategory")}  className="btn-view">
+          <div className="circle">
+            <img src="https://img.icons8.com/?size=100&id=85563&format=png&color=000000" alt="" srcset="" className="arrow"/>
+          </div>
+          See all
         </button>
         </div>
       )}
