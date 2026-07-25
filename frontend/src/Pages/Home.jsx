@@ -1,12 +1,15 @@
 import { useState } from "react";
 
 import ProductCategoryTabs from "../Components/ProductCategoryTabs";
-import {Card} from "../Components/Card";
+// import {Card} from "../Components/Card";
 import {Herosection} from "../Components/Herosection";
 import RandomProducts from "../Components/RandomProducts";
+import FeatureStore from "../Components/FeaturedStore";
+
+
 
 function Home() {
-  const [selectedCategory, setSelectedCategory] = useState("");
+  const [ setSelectedCategory] = useState("");
 
   return (
     <>
@@ -18,8 +21,9 @@ function Home() {
       
       <RandomProducts/>
 
+      <FeatureStore/>
 
-      <Card selectedCategory={selectedCategory} />
+      {/* <Card selectedCategory={selectedCategory} /> */}
     </>
   );
 }

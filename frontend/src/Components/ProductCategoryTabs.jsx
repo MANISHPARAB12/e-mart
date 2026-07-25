@@ -6,6 +6,13 @@ import "../App.css"
 function ProductCategoryTabs() {
   const [categories, setCategories] = useState([]);
 
+  const categoryImages = {
+    Fruits:"https://raw.githubusercontent.com/MANISHPARAB12/e-mart/main/images/fruits-product-category.png",
+    Vegetables:"https://raw.githubusercontent.com/MANISHPARAB12/e-mart/main/images/vegetables-product-category.png",
+    "Cold Drinks":"https://raw.githubusercontent.com/MANISHPARAB12/e-mart/main/images/colddrink-product-category.png",
+    Beverages:"https://raw.githubusercontent.com/MANISHPARAB12/e-mart/main/images/beverages-product-categroy.png",
+  }
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -28,7 +35,12 @@ function ProductCategoryTabs() {
             key={category}
             onClick={() => navigate("/allCategory")}
           >
-            {category}
+            <p>{category}</p>
+
+            <span className="img-span">
+              <img src={categoryImages[category]} alt={category} width={100} className="tab-img"/>
+            </span>
+
           </button>
         ))}
       </div>

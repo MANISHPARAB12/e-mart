@@ -31,13 +31,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    mix-blend-mode: multiply;
 }
 
 .image img{
     /* width: 8%; */
     /* height: 10px; */
     object-fit: contain;
-    mix-blend-mode: multiply;
 }
 
 .card h2{

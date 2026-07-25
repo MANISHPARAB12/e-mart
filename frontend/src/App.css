@@ -36,7 +36,7 @@
 .heroimg {
     height: 400px;
     /* mix-blend-mode: multiply; */
-    background: transparent;
+    /* background: transparent; */
     position: relative;
 }
 
@@ -62,17 +62,125 @@
     justify-content: center;
     margin-top: 4rem;
     /* margin: 10px; */
+    display: flex;
+    justify-content: space-center;
 }
 
 .category-container button {
-    height: 50px;
-    width: 100px;
+    height: 80px;
+    width: 180px;
     margin: 10px;
 }
 
 .viewallbtn button {
     margin-top: 10px;
-    height: 50px;
+    height: 80px;
     width: 80px ;
 }
+
+button p {
+    margin-right: 80px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.img-span {
+    margin-left: 75px;
+}
+
+.tab-img {
+    margin-top: -25px;
+}
 /* product Category tab section css ends */
+
+/* you might like  */
+
+.random-products {
+    margin-top: 120px;
+}
+
+.random-products h2 {
+    margin-left: 80px;
+    font-family: "Lexend", sans-serif;
+}
+
+/* you might be like css end */
+
+/* featured store css start */
+   .div-container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    margin-top:30px;
+    flex-wrap:wrap;
+}
+
+.store-card{
+    width:360px;
+    border-radius:20px;
+    overflow:hidden;
+    background:#fff;
+    box-shadow:0 4px 15px rgba(0,0,0,.12);
+}
+
+.store-top{
+    height:130px;
+    position:relative;
+}
+
+.orange{
+    background:#f97316;
+}
+
+.blue{
+    background:#4f46e5;
+}
+
+.green{
+    background:#59f2b5;
+}
+
+.store-logo{
+    /* width:80px; */
+    height:80%;
+    object-fit:contain;
+    position:absolute;
+    top: 75px;
+    /* bottom:-35px; */
+}
+    
+.store-bottom{
+    padding:50px 25px 20px;
+}
+
+.store-bottom h3{
+    margin:0;
+    font-size:28px;
+    font-weight:600;
+}
+
+.store-bottom p{
+    margin-top:12px;
+    color:#666;
+    font-size:18px;
+} 
+.orangelogo {
+    height: 80px;
+    width: 80px;
+    object-fit:contain;
+    position:absolute;
+    left:25px;
+    bottom:-35px;
+}
+.heading-container {
+    display: flex;
+    justify-content: space-between;
+}
+.heading {
+    font-family:"Lexend", sans-serif;
+    margin-left: 80px;
+}
+.vas {
+    margin-right: 80px;
+}
+/* featured store css end */

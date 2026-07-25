@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "./Card.css";
+import "../App.css"
 
 const RandomProducts = () => {
   const [products, setProducts] = useState([]);
@@ -20,7 +21,7 @@ const RandomProducts = () => {
 
   return (
     <div className="random-products">
-      <h2>You Might Like</h2>
+      <h2>You Might need</h2>
 
       <div className="Card-container">
         {products.map((item) => (
