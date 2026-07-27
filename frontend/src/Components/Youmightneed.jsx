@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { FaArrowRight } from "react-icons/fa";
-import "./Card.css";
+import "../Css/Card.css";
 import "../Css/Youmightneed.css"
 
 const Youmightneed = () => {
