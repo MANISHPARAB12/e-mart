@@ -1,55 +1,50 @@
 import { useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import axios from "axios";
 import "./Card.css";
 
-export const Card = ({ selectedCategory }) => {
+export const Card = () => {
   const [products, setProducts] = useState([]);
+  const [searchParams] = useSearchParams();
+
+  // Read category from URL
+  const selectedCategory = searchParams.get("category");
 
   useEffect(() => {
     axios
       .get("http://localhost:3000/products")
-      .then((res) => setProducts(res.data))
+      .then((res) => {
+        setProducts(res.data);
+      })
       .catch((err) => console.log(err));
   }, []);
 
-  // Get unique categories
-  const categories = [...new Set(products.map((item) => item.category))];
+  // Filter products based on selected category
+  const filteredProducts = selectedCategory
+    ? products.filter((item) => item.category === selectedCategory)
+    : products;
 
   return (
-    <>
-      {categories
-        .filter((category) =>
-          selectedCategory ? category === selectedCategory : true
-        )
-        .map((category) => (
-          
-          <div key={category}>
-            <h1>{category}</h1>
+    <div className="Card-container">
+      {filteredProducts.map((item) => (
+        <div className="card" key={item.id}>
+          <img
+            src={item.image}
+            alt={item.name}
+            className="image"
+          />
 
-            <div className="Card-container">
-              {products
-                .filter((item) => item.category === category)
-                .map((item) => (
-                  <div className="card" key={item.id}>
-                    <img
-                      src={item.image}
-                      alt={item.name}
-                      className="image"
-                    />
+          <h3>{item.name}</h3>
 
-                    <span><h3>{item.name}</h3></span>
+          <p>{item.category}</p>
 
-                    <p>₹{item.price}</p>
+          <p>₹{item.price}</p>
 
-                    <span className="btn-container">
-                      <button className="addtocart">+</button>
-                    </span>
-
-                  </div>
-                ))}
-            </div>
+          <div className="btn-container">
+            <button className="addtocart">+</button>
           </div>
-        ))}
-    </>
+        </div>
+      ))}
+    </div>
   );
 };

@@ -1,61 +1,47 @@
-import axios from 'axios';
-import {useState,useEffect} from 'react'
-import { useNavigate } from 'react-router-dom';
+import "../Css/AllCategory.css";
+import { useSearchParams } from "react-router-dom";
 
+const AllCategory = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
 
+  const selectedCategory = searchParams.get("category") || "";
 
-const AllCategory = ({selectedCategory}) => {
-  const [products, setProducts] = useState([]);
+  const handleCategoryChange = (e) => {
+    const category = e.target.value;
 
-  const navigate = useNavigate();
+    const params = {};
 
-  useEffect(()=> {
-    axios
-      .get("http://localhost:3000/products")
-      .then((res) => {setProducts(res.data)})
-      .catch((err)=> console.log(err));
-  }, []);
+    if (category) {
+      params.category = category;
+    }
 
-  const categories = [...new Set(products.map((item) => item.category))];
+    setSearchParams(params);
+  };
 
   return (
-      <>
-          <button onClick={() => navigate("/")}>Go Back</button>
+    <div>
+      <h2>Gromuse / All Category</h2>
 
-          
-        {categories
-        .filter((category) =>
-          selectedCategory ? category === selectedCategory : true
-        )
-        .map((category) => (
-          <div key={category}>
-            <h1>{category}</h1>
-
-            <div className="Card-container">
-              {products
-                .filter((item) => item.category === category)
-                .map((item) => (
-                  <div className="card" key={item.id}>
-                    <img
-                      src={item.image}
-                      alt={item.name}
-                      className="image"
-                    />
-
-                    <span><h3>{item.name}</h3></span>
-
-                    <p>₹{item.price}</p>
-
-                    <span className="btn-container">
-                      <button className="addtocart">+</button>
-                    </span>
-
-                  </div>
-                ))}
-            </div>
-          </div>
-        ))}
-      </>
+      <div className="filter">
+        <div className="allcategorydropdown">
+          <select
+            value={selectedCategory}
+            onChange={handleCategoryChange}
+            className="dd"
+          >
+            <option value="">All Category</option>
+            <option value="Fruits">Fruits</option>
+            <option value="Vegetables">Vegetables</option>
+            <option value="Grocery">Grocery</option>
+            <option value="Cold Drinks">Cold Drinks</option>
+            <option value="Beverages">Beverages</option>
+            <option value="Jewellery">Jewellery</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Toys">Toys</option>
+          </select>
+        </div>
+      </div>
+    </div>
   );
 };
 

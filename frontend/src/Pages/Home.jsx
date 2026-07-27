@@ -8,6 +8,7 @@ import FeatureStore from "../Components/FeaturedStore";
 
 
 
+
 function Home() {
   const [ setSelectedCategory] = useState("");
 
@@ -19,9 +20,11 @@ function Home() {
         setSelectedCategory={setSelectedCategory}
       />
       
+      
       <Youmightneed/>
 
       <FeatureStore/>
+
 
       {/* <Card selectedCategory={selectedCategory} /> */}
     </>

@@ -1,0 +1,25 @@
+.random-products {
+    margin-top: 120px;
+}
+
+.random-products h2 {
+    margin-left: 80px;
+    font-family: "Lexend", sans-serif;
+}
+
+.see-more {
+  display: flex;
+  align-items: center; /* Vertically center */
+  gap: 8px;            /* Space between text and arrow */
+  cursor: pointer;
+}
+
+.sm {
+  margin: 0;           /* Remove default <p> margin */
+  font-size: 16px;
+}
+
+.rightarrow {
+  width: 18px;
+  height: 18px;
+}

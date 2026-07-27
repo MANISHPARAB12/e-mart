@@ -1,0 +1,60 @@
+.container{
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    margin-top: 4rem;
+    /* margin: 10px; */
+    display: flex;
+    justify-content: space-center;   
+}
+.category-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.category-container button {
+    height: 100px;
+    width: 200px;
+    margin: 10px;
+}
+
+.viewallbtn button {
+    margin-top: 10px;
+    height: 100px;
+    width: 100px ;
+    background-color: rgb(144, 246, 97);
+    border: none;
+    line-height: 30px;
+}
+
+
+
+.circle {
+    background-color: white;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    margin-left: 15px;
+}
+.arrow {
+    height: 20px;
+    width: auto;
+    margin-top:15px;
+    margin-left:-4px;
+    
+}
+button p {
+    margin-right: 80px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.img-span {
+    margin-left: 75px;
+}
+
+.tab-img {
+    margin-top: -25px;
+}

@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { FaArrowRight } from "react-icons/fa";
 import "./Card.css";
-import "../App.css"
+import "../Css/Youmightneed.css"
 
 const Youmightneed = () => {
   const [products, setProducts] = useState([]);
@@ -23,10 +24,12 @@ const Youmightneed = () => {
     <div className="random-products">
       <div className="heading-container">
       <h2>You Might need</h2>
-      <div className="grp">
-      <p className="sm">See more</p>
-        <img src="https://img.icons8.com/?size=100&id=85563&format=png&color=000000" alt="" srcset="" className="rightarrow"/>
+      
+        <div className="grp">
+        <p className="sm">See more</p>
+      <FaArrowRight className="rightarrow" />
       </div>
+
       </div>
         
 

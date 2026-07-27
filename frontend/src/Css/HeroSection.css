@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+.hero {
+    background-color: rgb(32, 88, 83);
+    height: 50vh;
+    border-radius: 20px;
+    clip-path: ellipse(100% 100% at 50% 0%); 
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-container {
+    margin-left: 30px;
+    margin-top: 50px;
+}
+
+.shop-btn {
+    margin-left: 20px;
+    border: none;
+    height: 40px;
+    width: 150px;
+    border-radius: 10px;
+    background-color:rgb(139, 202, 56);
+    font-size: 14px;
+    margin-top: 25px;
+}
+
+.heroimg {
+    height: 50vh;
+    width: auto;
+}
+
+.right-container {
+    margin-right: 100px;
+    margin-top: 30px;
+}
+
+.h1-container {
+    color: white;
+}
+
+.p-container {
+    color:#ddd;
+    margin-top: 10px;
+}
