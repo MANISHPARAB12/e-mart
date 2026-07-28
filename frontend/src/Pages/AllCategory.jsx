@@ -1,46 +1,46 @@
-import "../Css/AllCategory.css";
-import { useSearchParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { Card } from "../Components/Card";
 
 const AllCategory = () => {
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [products, setProducts] = useState([]);
+  const [category, setCategory] = useState("");
 
-  const selectedCategory = searchParams.get("category") || "";
+  useEffect(() => {
+    let url = "http://localhost:3000/products";
 
-  const handleCategoryChange = (e) => {
-    const category = e.target.value;
-
-    const params = {};
-
-    if (category) {
-      params.category = category;
+    if (category !== "") {
+      url += `?category=${category}`;
     }
 
-    setSearchParams(params);
-  };
+    axios
+      .get(url)
+      .then((res) => {
+        setProducts(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, [category]);
 
   return (
     <div>
-      <h2>Gromuse / All Category</h2>
+      <h2>Products</h2>
 
-      <div className="filter">
-        <div className="allcategorydropdown">
-          <select
-            value={selectedCategory}
-            onChange={handleCategoryChange}
-            className="dd"
-          >
-            <option value="">All Category</option>
-            <option value="Fruits">Fruits</option>
-            <option value="Vegetables">Vegetables</option>
-            <option value="Grocery">Grocery</option>
-            <option value="Cold Drinks">Cold Drinks</option>
-            <option value="Beverages">Beverages</option>
-            <option value="Jewellery">Jewellery</option>
-            <option value="Electronics">Electronics</option>
-            <option value="Toys">Toys</option>
-          </select>
-        </div>
-      </div>
+      <select
+        value={category}
+        onChange={(e) => setCategory(e.target.value)}
+      >
+        <option value="">All Category</option>
+        <option value="Fruits">Fruits</option>
+        <option value="Vegetables">Vegetables</option>
+        <option value="Grocery">Grocery</option>
+        <option value="Electronics">Electronics</option>
+        <option value="Cold Drinks">Cold Drinks</option>
+        <option value="Toys">Toys</option>
+      </select>
+
+      <Card products={products} />
     </div>
   );
 };
