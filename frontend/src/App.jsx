@@ -9,11 +9,11 @@ function App() {
       <Navbar />
 
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/allCategory" element={<AllCategory />} />
+        <Route path="/" element={<Home/>} />
+        <Route path="/allCategory" element={<AllCategory/>} />
       </Routes>
 
-      <Home/>
+      
     </>
   );
 }

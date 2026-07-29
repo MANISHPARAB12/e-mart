@@ -5,6 +5,7 @@ import ProductCategoryTabs from "../Components/ProductCategoryTabs";
 import {Herosection} from "../Components/Herosection";
 import Youmightneed from "../Components/Youmightneed";
 import FeatureStore from "../Components/FeaturedStore";
+import OfferCards from "../Components/OfferCards";
 
 
 
@@ -25,6 +26,7 @@ function Home() {
 
       <FeatureStore/>
 
+      <OfferCards/>
 
       {/* <Card selectedCategory={selectedCategory} /> */}
     </>
