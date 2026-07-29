@@ -26,7 +26,7 @@ function Home() {
 
       <FeatureStore/>
 
-      <OfferCards/>
+      <OfferCards className="home-offer-card" />
 
       {/* <Card selectedCategory={selectedCategory} /> */}
     </>

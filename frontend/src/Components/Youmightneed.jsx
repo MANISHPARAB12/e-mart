@@ -36,18 +36,19 @@ const Youmightneed = () => {
       <div className="Card-container">
         {products.map((item) => (
           <div className="card" key={item.id}>
+            <div className="img-container">
             <img
               src={item.image}
               alt={item.name}
               className="image"
               width="120"
-            />
-
-            <h3>{item.name}</h3>
-
-            <p>{item.category}</p>
-
-            <h2>₹{item.price}</h2>
+              />
+              </div>
+            <p>{item.name}</p>
+            <p>₹{item.price}</p>
+            <div className="btn-container">
+              <button className="addtocart">+</button>
+            </div>
           </div>
         ))}
       </div>

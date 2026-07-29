@@ -1,6 +1,6 @@
 // import React from 'react'
 import "../Css/OfferCards.css"
-const OfferCards = () => {
+const OfferCards = ({className = " "}) => {
         const card= [
             {
                 id: 1,
@@ -9,17 +9,17 @@ const OfferCards = () => {
                 text:"Enjoy Discount all types of Grocery & Frozen item",
                 image:"https://raw.githubusercontent.com/MANISHPARAB12/imgforproducts/main/Fruits/apple.png",
                 "top-container":"rgb(228, 170, 228)",
-                "bottom-container":"#672866"
-            },
-            {
+                "bottom-container":"#672866",
+              },
+              {
                 id: 2,
                 title:"Discount",
                 heading:"30%",
                 text:"Enjoy Discount all types of Grocery & Frozen item",
                 image:"https://raw.githubusercontent.com/MANISHPARAB12/imgforproducts/main/Vegetables/broccoli.png",
                 "top-container":"rgb(196, 146, 146)",
-                "bottom-container":"#984108"
-            },
+                "bottom-container":"#984108",
+              },
             {
                 id: 3,
                 title:"Up to",
@@ -41,7 +41,7 @@ const OfferCards = () => {
         ]
   return (
     <>
-            <div className="offercard-container">
+            <div className={`offercard-container ${className}`}>
       {card.map((card) => (
         <div
           key={card.id}
@@ -54,7 +54,9 @@ const OfferCards = () => {
             </div>
 
           <div className="bottom-container"  style={{backgroundColor: card["bottom-container"]}}>
+            <div className="img-container">
             <img src={card.image} alt=""  className="offer-img"/> 
+            </div>
           </div>
           
         </div>

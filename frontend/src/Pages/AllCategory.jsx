@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Card } from "../Components/Card";
+import OfferCards from "../Components/OfferCards";
 
 const AllCategory = () => {
   const [products, setProducts] = useState([]);
@@ -24,7 +25,8 @@ const AllCategory = () => {
   }, [category]);
 
   return (
-    <div>
+    <>
+      <OfferCards className="category-offercard"/>
       <h2>Products</h2>
 
       <select
@@ -41,7 +43,7 @@ const AllCategory = () => {
       </select>
 
       <Card products={products} />
-    </div>
+    </>
   );
 };
 

@@ -3,11 +3,11 @@
     gap:25px;
     justify-content:center;
     flex-wrap:wrap;
+    /* margin-top: 6rem; */
 }
 
 .offer-card{
     width:280px;
-    height:420px;
     position:relative;
     border-radius:20px;
     overflow:hidden;
@@ -20,18 +20,29 @@
 }
 
 .bottom-container{
-    clip-path: path("M0 45 Q140 0 280 45 L280 180 L0 180 Z");
+    clip-path: path("M0 30 Q140 0 280 32 L280 180 L0 180 Z");
     position: absolute;
     z-index: 1;
-    top: 30%;
-    height:60vh;
+    top: 40%;
+    height: 300px;
     width: 93%;
 }
 
 .offer-img {
     /* mix-blend-mode: multiply; */
     height: 120px;
-    margin-top: 20px;
-    margin-left: 30px;
+    padding: 5px;
+    margin-top: 40px;
+    margin-left: 40px;
 }
 
+
+/* for the home offer card */
+
+.home-offer-card {
+    margin-top: 6rem;
+}
+
+.home-offer-card .offer-card{
+    height:400px;
+}
