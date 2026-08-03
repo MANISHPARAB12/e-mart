@@ -2,36 +2,45 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Card } from "../Components/Card";
 import OfferCards from "../Components/OfferCards";
+import { useSearchParams } from "react-router-dom";
 
 const AllCategory = () => {
   const [products, setProducts] = useState([]);
-  const [category, setCategory] = useState("");
+
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  const category = searchParams.get("category") || "";
 
   useEffect(() => {
     let url = "http://localhost:3000/products";
 
-    if (category !== "") {
-      url += `?category=${category}`;
+    if (category) {
+      url += `?category=${encodeURIComponent(category)}`;
     }
 
     axios
       .get(url)
-      .then((res) => {
-        setProducts(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+      .then((res) => setProducts(res.data))
+      .catch((err) => console.log(err));
   }, [category]);
 
   return (
     <>
-      <OfferCards className="category-offercard"/>
+      <OfferCards className="category-offercard" />
+
       <h2>Products</h2>
 
       <select
         value={category}
-        onChange={(e) => setCategory(e.target.value)}
+        onChange={(e) => {
+          const value = e.target.value;
+
+          if (value === "") {
+            setSearchParams({});
+          } else {
+            setSearchParams({ category: value });
+          }
+        }}
       >
         <option value="">All Category</option>
         <option value="Fruits">Fruits</option>

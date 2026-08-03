@@ -1,5 +1,10 @@
 
-/* clip-path: polygon(25% 25%, 50% 35%, 75% 25%, 75% 75%, 50% 90%, 25% 75%); */
+/* clip-path: polygon(25% 25%, 50% 35%, 75% 25%, 75% 75%, 50% 90%, 25% 75%); 
+    .clipped {
+    clip-path: polygon(49.7% 44.6%, 93.3% 25%, 93.3% 75%, 49.5% 97.1%, 6.7% 75%, 6.7% 25%);
+}
+*/
+
 
 .Card-container{
     width: 90%;
@@ -23,10 +28,7 @@
     /* clip-path: ellipse(100% 100% at 50% 0%); */
 }
 
-.card:hover{
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-}
+
 
 .image{
     width: 95%;
@@ -38,8 +40,6 @@
 }
 
 .image img{
-    /* width: 8%; */
-    /* height: 10px; */
     object-fit: contain;
 }
 
@@ -65,8 +65,8 @@
 }
 
 .addtocart{
-    width: 100%;
+    width: 150px;
     height: 60px;
     background: #9c9b9b;
-    clip-path: polygon(25% 25%, 50% 35%, 75% 25%, 75% 75%, 50% 90%, 25% 75%);
+    clip-path: polygon(49.7% 44.6%, 93.3% 25%, 93.3% 75%, 49.5% 97.1%, 6.7% 75%, 6.7% 25%);
 }

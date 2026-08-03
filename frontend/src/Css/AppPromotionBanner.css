@@ -1,0 +1,61 @@
+.MainContainer{
+    background-color: rgb(129, 48, 129);
+    height: 50vh;
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.h2-container {
+    width: 350px;
+    color: #ddd;
+    padding-top: 80px;
+    padding-left: 40px;
+}
+
+.txt-container p {
+    color: #ddd;
+    padding-top: 20px;
+    padding-left: 50px;
+    font-size: 12px;
+}
+
+.app-link{
+    padding-top: 15px;
+    padding-left: 50px;
+    display: flex;
+    gap: 20px;
+}
+
+.googleplay {
+    background-color: black;
+    width: 180px;
+    height: 60px;
+    border-radius: 10px;
+    display: flex;
+}
+
+.googleplay img {
+    height: 100px;
+    margin-top: -18px;
+    margin-left: -10px;
+}
+
+.appstore {
+    border-radius: 10px;
+    background-color: black;
+    width: 180px;
+    height: 60px;
+    z-index: 1;
+}
+
+.appstore img {
+    height: 100px;
+    margin-top: -18px;
+    margin-left: -5px;
+}
+
+.img-Container img {
+    height: 45vh;
+    margin-top: 36px;
+    margin-right: 80px;
+}

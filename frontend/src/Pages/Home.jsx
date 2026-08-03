@@ -6,6 +6,7 @@ import {Herosection} from "../Components/Herosection";
 import Youmightneed from "../Components/Youmightneed";
 import FeatureStore from "../Components/FeaturedStore";
 import OfferCards from "../Components/OfferCards";
+import { Banner } from "../Components/AppPromotionBanner";
 
 
 
@@ -19,7 +20,7 @@ function Home() {
 
       <ProductCategoryTabs
         setSelectedCategory={setSelectedCategory}
-      />
+        />
       
       
       <Youmightneed/>
@@ -28,6 +29,9 @@ function Home() {
 
       <OfferCards className="home-offer-card" />
 
+      
+        <Banner/>
+      
       {/* <Card selectedCategory={selectedCategory} /> */}
     </>
   );
