@@ -23,26 +23,28 @@
     clip-path: path("M0 30 Q140 0 280 32 L280 180 L0 180 Z");
     position: absolute;
     z-index: 1;
-    top: 40%;
-    height: 300px;
-    width: 93%;
+    top: 42%;
+    height: 200px;
+    width: 100%;
 }
 
 .offer-img {
     /* mix-blend-mode: multiply; */
     height: 120px;
     padding: 5px;
-    margin-top: 40px;
-    margin-left: 40px;
+    margin-top: 30px;
 }
 
+.imgcontainer{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+}
 
 /* for the home offer card */
 
 .home-offer-card {
     margin-top: 6rem;
+    margin-bottom: 5rem;
 }
 
-.home-offer-card .offer-card{
-    height:400px;
-}

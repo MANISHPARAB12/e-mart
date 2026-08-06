@@ -1,4 +1,5 @@
 import "../Css/AppPromotionBanner.css"
+import "../App.css"
 import GooglePlay from "../assets/Googleplay.png";
 import AppStore from "../assets/AppStore.png";
 import ManImg from "../assets/manimg.png"
@@ -6,6 +7,8 @@ import ManImg from "../assets/manimg.png"
 export const Banner = () => {
     return (
         <>
+        <div className="padding">
+
            <div className="MainContainer">
                 <div className="txt-container">
                     <div className="h2-container">
@@ -27,6 +30,7 @@ export const Banner = () => {
                     </div>
 
            </div>
+        </div>
         </>
     )
 }

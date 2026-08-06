@@ -1,27 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
 .MainContainer{
-    background-color: rgb(129, 48, 129);
-    height: 50vh;
+    background-color: #772459;
+    height: 55vh;
     border-radius: 40px;
     display: flex;
     justify-content: space-between;
 }
 .h2-container {
-    width: 350px;
+    width: 450px;
     color: #ddd;
     padding-top: 80px;
-    padding-left: 40px;
+    padding-left: 80px;
+    font-family: "Lexend", sans-serif;
+    font-size: 20px;
+
 }
 
 .txt-container p {
     color: #ddd;
     padding-top: 20px;
-    padding-left: 50px;
+    padding-left: 82px;
     font-size: 12px;
 }
 
 .app-link{
     padding-top: 15px;
-    padding-left: 50px;
+    padding-left: 80px;
     display: flex;
     gap: 20px;
 }
@@ -37,7 +42,7 @@
 .googleplay img {
     height: 100px;
     margin-top: -18px;
-    margin-left: -10px;
+    margin-left: 10px;
 }
 
 .appstore {
@@ -51,11 +56,11 @@
 .appstore img {
     height: 100px;
     margin-top: -18px;
-    margin-left: -5px;
+    margin-left: 15px;
 }
 
 .img-Container img {
-    height: 45vh;
-    margin-top: 36px;
+    height: 50vh;
+    margin-top: 35px;
     margin-right: 80px;
 }

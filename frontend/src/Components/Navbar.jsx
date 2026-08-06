@@ -1,8 +1,11 @@
 // import React from "react";
 import "../Css/Navbar.css";
+import "../App.css"
 
 export const Navbar = () => {
   return (
+    <div className="padding">
+
     <nav className="navbar">
       <div className="left">
         <i className="fa-solid fa-bars menu"></i>
@@ -32,14 +35,15 @@ export const Navbar = () => {
 
         <div className="cart">
           <i className="fa-solid fa-cart-plus"></i>
-          <span className="badge">2</span>
+          <span className="badge">0</span>
         </div>
 
         <img
           src="https://i.pravatar.cc/45"
           alt="profile"
-        />
+          />
       </div>
     </nav>
+          </div>
   );
 };

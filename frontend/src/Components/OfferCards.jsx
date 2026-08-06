@@ -41,12 +41,14 @@ const OfferCards = ({className = " "}) => {
         ]
   return (
     <>
+    <div className="padding">
+
             <div className={`offercard-container ${className}`}>
       {card.map((card) => (
         <div
-          key={card.id}
+        key={card.id}
           className="offer-card"
-        >
+          >
           <div className="top-container" style={{backgroundColor: card["top-container"]}}>
           <p>{card.title}</p>
           <h2>{card.heading}</h2>
@@ -54,7 +56,7 @@ const OfferCards = ({className = " "}) => {
             </div>
 
           <div className="bottom-container"  style={{backgroundColor: card["bottom-container"]}}>
-            <div className="img-container">
+            <div className="imgcontainer">
             <img src={card.image} alt=""  className="offer-img"/> 
             </div>
           </div>
@@ -62,6 +64,7 @@ const OfferCards = ({className = " "}) => {
         </div>
       ))}
     </div>
+      </div>
     </>
   )
 }

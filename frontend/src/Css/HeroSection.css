@@ -10,8 +10,8 @@
 }
 
 .left-container {
-    margin-left: 30px;
-    margin-top: 50px;
+    margin-left: 60px;
+    margin-top: 55px;
 }
 
 .shop-btn {
@@ -37,9 +37,13 @@
 
 .h1-container {
     color: white;
+    width: 22rem;
+    font-size: 18px;
 }
 
 .p-container {
     color:#ddd;
     margin-top: 10px;
+    font-size: 14.5px;
+    width: 350px;
 }

@@ -7,7 +7,7 @@ import Youmightneed from "../Components/Youmightneed";
 import FeatureStore from "../Components/FeaturedStore";
 import OfferCards from "../Components/OfferCards";
 import { Banner } from "../Components/AppPromotionBanner";
-
+import { Services } from "../Components/ServicesSection";
 
 
 
@@ -16,21 +16,36 @@ function Home() {
 
   return (
     <>
+    
       <Herosection />
+    
 
+     
       <ProductCategoryTabs
         setSelectedCategory={setSelectedCategory}
         />
       
       
+      
       <Youmightneed/>
+      
 
+
+      
       <FeatureStore/>
+      
 
+      
       <OfferCards className="home-offer-card" />
+      
+      
 
       
         <Banner/>
+      
+
+
+        <Services/>
       
       {/* <Card selectedCategory={selectedCategory} /> */}
     </>

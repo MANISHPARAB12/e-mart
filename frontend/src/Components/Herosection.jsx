@@ -1,18 +1,19 @@
 // import React from 'react'
 import heroImg from '../assets/heroimg.png'
 import '../Css/HeroSection.css'
+import "../App.css"
 export const Herosection = () => {
   return (
+    <div className="padding">
+
     <section className='hero'>
         <div className='left-container'>
         <div className="h1-container">
-            <h1>We bring the store</h1>
-            <h1>to your door</h1>
+            <h1>We bring the store to your door</h1>
         </div>
 
         <div className="p-container">
-        <p>Get organic produce and sustainably sourced</p>
-        <p>groceries delivery at up to 4% off grocery.</p>
+            <p>Get organic produce and sustainably sourced groceries delivery at up to 4% off grocery.</p>
         </div>
 
         <button className='shop-btn'>
@@ -24,6 +25,7 @@ export const Herosection = () => {
             <img src={heroImg} alt=""  className='heroimg'/>
         </div>
     </section>
+    </div>
   )
 }
 

@@ -29,12 +29,14 @@ function ProductCategoryTabs() {
   }, []);
 
   return (
+    <div className="padding">
+
     <div className="container">
       <div className="category-container">
         {categories.slice(0, 4).map((category) => (
           <button
-            key={category}
-            onClick={() => navigate("/allCategory")}
+          key={category}
+          onClick={() => navigate("/allCategory")}
           >
             <p>{category}</p>
 
@@ -57,6 +59,7 @@ function ProductCategoryTabs() {
         </div>
       )}
     </div>
+      </div>
   );
 }
 

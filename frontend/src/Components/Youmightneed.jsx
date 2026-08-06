@@ -21,6 +21,8 @@ const Youmightneed = () => {
   }, []);
 
   return (
+    <div className="padding">
+
     <div className="random-products">
       <div className="heading-container">
       <h2>You Might need</h2>
@@ -53,6 +55,7 @@ const Youmightneed = () => {
         ))}
       </div>
     </div>
+        </div>
   );
 };
 

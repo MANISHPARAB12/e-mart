@@ -3,6 +3,8 @@ import "../App.css";
 const FeatureStore = () => {
   return (
     <>
+    <div className="padding">
+
     <div className="heading-container">
       <h2 className="heading">Featured Store</h2>
       <h4 className="vas">Visit all stores ➡️</h4>
@@ -32,7 +34,7 @@ const FeatureStore = () => {
               alt="Now Delivery"
               className="store-logo"
               
-            />
+              />
           </div>
 
           <div className="store-bottom">
@@ -47,7 +49,7 @@ const FeatureStore = () => {
               src="https://raw.githubusercontent.com/MANISHPARAB12/e-mart/main/images/qualityproduct.png"
               alt="Quality Product"
               className="store-logo"
-            />
+              />
           </div>
 
           <div className="store-bottom">
@@ -55,6 +57,7 @@ const FeatureStore = () => {
             <p>⚡ Delivery in 12 minute</p>
           </div>
         </div>
+              </div>
 
       </div>
     </>
