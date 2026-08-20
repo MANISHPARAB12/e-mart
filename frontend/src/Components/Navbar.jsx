@@ -12,7 +12,7 @@ export const Navbar = () => {
 
         <div className="logo">
           <i className="fa-solid fa-cart-shopping"></i>
-          <span>Gromuse</span>
+          <span>e-Mart</span>
         </div>
       </div>
 
