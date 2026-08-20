@@ -8,11 +8,7 @@ export const Card = ({ products }) => {
       ) : (
         products.map((item) => (
           <div className="card" key={item.id}>
-            <img
-              src={item.image}
-              alt={item.name}
-              className="image"
-            />
+            <img src={item.image} alt={item.name} className="image" />
 
             <h3>{item.name}</h3>
 

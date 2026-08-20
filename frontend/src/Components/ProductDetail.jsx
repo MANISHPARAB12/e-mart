@@ -1,17 +1,17 @@
-import React from "react";
+// import React from "react";
 import "../Css/ProductDetail.css";
 
 const ProductDetail = () => {
-   const product = {
-      name: "Fresh Red Apple",
-      description:
-        "Fresh and delicious red apples. Perfect for eating directly or adding to your favorite recipes.",
-      price: 180,
-      image: "https://raw.githubusercontent.com/MANISHPARAB12/imgforproducts/main/Fruits/apple.png",
-    };
+  const product = {
+    name: "Fresh Red Apple",
+    description:
+      "Fresh and delicious red apples. Perfect for eating directly or adding to your favorite recipes.",
+    price: 180,
+    image:
+      "https://raw.githubusercontent.com/MANISHPARAB12/imgforproducts/main/Fruits/apple.png",
+  };
   return (
     <div className="product-detail-container">
-
       {/* Left Section - Image */}
       <div className="product-image-section">
         <img
@@ -25,25 +25,37 @@ const ProductDetail = () => {
       <div className="product-info-section">
         <h1>{product.name}</h1>
 
-        <p className="product-description">
-          {product.description}
-        </p>
+        <p className="product-description">{product.description}</p>
 
-        <h2 className="product-price">
-          ₹{product.price}
-        </h2>
+        <h2 className="product-price">₹{product.price}</h2>
 
-        <div className="product-quantity">
-          <button>-</button>
-          <span>1</span>
-          <button>+</button>
+        <br />
+        <br />
+
+        <div className="btn-container2">
+          <button className="atb">
+            <i className="fa-solid fa-cart-shopping"></i>
+            <span>Add to bucket</span>
+          </button>
+          <button className="bwt">Buy with tamara</button>
         </div>
 
-        <button className="add-cart-btn">
-          Add to Cart
-        </button>
-      </div>
+              <br />
 
+        <div className="links">
+          <button className="atw">
+            <i className="fa-regular fa-heart"></i>
+            <span>Add to wishlist</span>
+          </button>
+          <br />
+          <button className="cwov">
+            <i className="fa-solid fa-store"></i>
+            <span>Compare with other vendor</span>
+          </button>
+        </div>
+
+
+      </div>
     </div>
   );
 };

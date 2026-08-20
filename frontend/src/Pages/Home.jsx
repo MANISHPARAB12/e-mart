@@ -37,12 +37,6 @@ function Home() {
       
       <ProductDetail />
 
-      <ProductCategoryTabs setSelectedCategory={setSelectedCategory} />
-
-      <Youmightneed />
-
-      <FeatureStore />
-
       
       <OfferCards className="home-offer-card" />
       
