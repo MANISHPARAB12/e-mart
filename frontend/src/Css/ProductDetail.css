@@ -8,7 +8,8 @@
   align-items: center;
   background-color: #f7f7f7;
   border-radius: 50px;
-  /* border: 2px solid black; */
+  /* border: 2px double rgb(216, 216, 216); */
+  box-shadow: 0 3px  20px rgb(96, 96, 96);
 }
 
 /* Left Section */
@@ -19,13 +20,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: #f7f7f7; */
+  /* background-color: red; */
   border-radius: 15px;
+  margin-left: 10px;
 }
 
 .product-detail-image {
   width: 80%;
-  height: 80%;
+  height: 100%;
   object-fit: contain;
   mix-blend-mode: multiply;
 }

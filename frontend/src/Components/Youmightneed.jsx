@@ -40,7 +40,6 @@ const Youmightneed = () => {
                   src={item.image}
                   alt={item.name}
                   className="image"
-                  width="120"
                 />
               </div>
               <p>{item.name}</p>

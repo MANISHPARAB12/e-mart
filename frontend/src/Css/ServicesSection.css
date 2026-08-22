@@ -6,8 +6,6 @@
     box-sizing: border-box;
 }
 
-
-
 body {
     overflow-x: hidden;
 }
@@ -16,8 +14,8 @@ body {
     background-color: #97f462;
     position: relative;
     width: 100%;
-    min-height: 90vh;
     margin-top: 80px;
+    padding-bottom: 0;
 }
 
 .services::before {
@@ -35,11 +33,14 @@ body {
 .text-container {
     position: relative;
     z-index: 2;
+
     display: flex;
     flex-direction: column;
     align-items: center;
+
     gap: 20px;
     padding-top: 120px;
+
     text-align: center;
 }
 
@@ -52,43 +53,60 @@ body {
     max-width: 650px;
     width: 90%;
 }
-.servicecard-container{
+
+
+/* CARDS */
+
+.servicecard-container {
     display: flex;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
+    align-items: flex-start;
+
     margin-top: 55px;
 }
+
 .servicecard {
     border: none;
     background-color: #052305;
     color: #72d942;
-    height: 51vh;
-    border-radius:0%;
+
     width: 20vw;
-    clip-path:path("M0 50  C0 15 55 0 130 0  C205 0 260 15 260 50 L260 380 L0 380  Z");
+    height: 380px;
+
+    border-radius: 0;
+
+    clip-path: path("M0 50 C0 15 55 0 130 0 C205 0 260 15 260 50 L260 380 L0 380 Z");
 }
+
+
+/* CARD TEXT */
 
 .text-container1 {
     margin-top: 3rem;
     margin-left: 2rem;
+
     font-size: 20px;
     font-family: "Lexend", sans-serif;
 }
+
+
+/* IMAGES */
 
 .img-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 70px;
-    margin-right: 50px;
+
     padding: 0;
 }
 
 .img {
     height: 200px;
+    margin-top: 100px;
 }
 
 .img2 {
     height: 200px;
-    margin-top: 0px;
+    margin-top: 90px;
     margin-left: 40px;
 }

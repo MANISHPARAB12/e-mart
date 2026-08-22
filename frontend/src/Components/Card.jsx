@@ -8,17 +8,25 @@ export const Card = ({ products }) => {
       ) : (
         products.map((item) => (
           <div className="card" key={item.id}>
-            <img src={item.image} alt={item.name} className="image" />
 
-            <h3>{item.name}</h3>
+            <div className="image-box">
+              <img
+                src={item.image}
+                alt={item.name}
+                className="image"
+              />
+            </div>
 
-            <p>{item.category}</p>
-
-            <p>₹{item.price}</p>
+            <div className="productinfo">
+              <h3>{item.name}</h3>
+              <p>{item.category}</p>
+              <p>₹{item.price}</p>
+            </div>
 
             <div className="btn-container">
               <button className="addtocart">+</button>
             </div>
+
           </div>
         ))
       )}

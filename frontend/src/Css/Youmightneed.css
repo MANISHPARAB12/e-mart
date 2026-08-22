@@ -3,11 +3,11 @@
 }
 
 .random-products h2 {
-    margin-left: 80px;
+    /* margin-left: 80px; */
     font-family: "Lexend", sans-serif;
 }
 
-.see-more {
+.grp{
   display: flex;
   align-items: center; /* Vertically center */
   gap: 8px;            /* Space between text and arrow */
@@ -22,4 +22,20 @@
 .rightarrow {
   width: 18px;
   height: 18px;
+}
+ 
+
+.img-container {
+  width: 100%;
+  height: 220px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+
+.Card-container {
+  margin: 40px 0 100px 0;
 }
