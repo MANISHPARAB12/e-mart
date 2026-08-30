@@ -6,6 +6,9 @@ import { Herosection } from "../Components/Herosection";
 import Youmightneed from "../Components/Youmightneed";
 import FeatureStore from "../Components/FeaturedStore";
 import OfferCards from "../Components/OfferCards";
+import { Banner } from "../Components/AppPromotionBanner";
+import { Services } from "../Components/ServicesSection";
+
 import ProductDetail from "../Components/ProductDetail";
 import Membership from "../Components/Membership";
 
@@ -14,19 +17,39 @@ function Home() {
 
   return (
     <>
+    
       <Herosection />
+    
 
+     
+      <ProductCategoryTabs
+        setSelectedCategory={setSelectedCategory}
+        />
+      
+      
+      
+      <Youmightneed/>
+      
+
+
+      
+      <FeatureStore/>
+      
       <ProductDetail />
 
-      <ProductCategoryTabs setSelectedCategory={setSelectedCategory} />
-
-      <Youmightneed />
-
-      <FeatureStore />
-
+      
       <OfferCards className="home-offer-card" />
+      
+      
       <Membership />
 
+      
+        <Banner/>
+      
+
+
+        <Services/>
+      
       {/* <Card selectedCategory={selectedCategory} /> */}
     </>
   );
