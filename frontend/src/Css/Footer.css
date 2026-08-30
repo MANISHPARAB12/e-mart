@@ -1,0 +1,351 @@
+/* ================================
+   FOOTER
+================================ */
+
+.footer {
+  width: 100%;
+  background-color: #fffdf5;
+  color: #222;
+  padding: 55px 85px 25px;
+  box-sizing: border-box;
+}
+
+
+/* ================================
+   TOP SECTION
+================================ */
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+  padding-bottom: 65px;
+}
+
+
+/* ================================
+   BRAND SECTION
+================================ */
+
+.footer-brand {
+  width: 34%;
+}
+
+
+/* LOGO */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin: 0 0 20px;
+
+  font-size: 30px;
+  font-weight: 700;
+
+  color: #149447;
+}
+
+
+/* DESCRIPTION */
+
+.footer-brand p {
+  max-width: 430px;
+
+  margin: 0 0 65px;
+
+  font-size: 14px;
+  line-height: 1.7;
+
+  color: #555;
+}
+
+
+/* ACCEPTED PAYMENTS TITLE */
+
+.footer-brand h4 {
+  margin: 0 0 25px;
+
+  font-size: 16px;
+  font-weight: 600;
+}
+
+
+/* ================================
+   PAYMENT IMAGES
+================================ */
+
+.payment-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+
+.payment-container img {
+  width: 52px;
+  height: 36px;
+
+  object-fit: contain;
+
+  border-radius: 3px;
+}
+
+
+/* ================================
+   FOOTER COLUMNS
+================================ */
+
+.footer-columns {
+  width: 60%;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 55px;
+}
+
+
+/* EACH COLUMN */
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* COLUMN TITLE */
+
+.footer-column h3 {
+  margin: 0 0 25px;
+
+  font-size: 17px;
+  font-weight: 600;
+}
+
+
+/* COLUMN LINKS */
+
+.footer-column a {
+  margin-bottom: 14px;
+
+  color: #444;
+
+  font-size: 14px;
+
+  text-decoration: none;
+
+  transition: 0.2s;
+}
+
+
+.footer-column a:hover {
+  color: #149447;
+}
+
+
+/* ================================
+   BOTTOM SECTION
+================================ */
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-top: 1px solid #ddd;
+
+  padding-top: 30px;
+
+  font-size: 13px;
+}
+
+
+/* ================================
+   BOTTOM LEFT
+================================ */
+
+.bottom-left {
+  display: flex;
+  align-items: center;
+
+  gap: 45px;
+}
+
+
+.bottom-item {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  color: #555;
+}
+
+
+.bottom-icon {
+  font-size: 20px;
+}
+
+
+/* ================================
+   CENTER LINKS
+================================ */
+
+.bottom-center {
+  display: flex;
+  align-items: center;
+
+  gap: 55px;
+}
+
+
+.bottom-center a {
+  color: #444;
+
+  text-decoration: none;
+}
+
+
+.bottom-center a:hover {
+  color: #149447;
+}
+
+
+/* ================================
+   COPYRIGHT
+================================ */
+
+.copyright {
+  color: #555;
+}
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 1000px) {
+
+  .footer {
+    padding: 45px 40px 25px;
+  }
+
+
+  .footer-top {
+    gap: 40px;
+  }
+
+
+  .footer-brand {
+    width: 30%;
+  }
+
+
+  .footer-columns {
+    width: 65%;
+    gap: 25px;
+  }
+
+
+  .footer-bottom {
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 768px) {
+
+  .footer {
+    padding: 40px 25px 25px;
+  }
+
+
+  .footer-top {
+    flex-direction: column;
+
+    gap: 45px;
+  }
+
+
+  .footer-brand {
+    width: 100%;
+  }
+
+
+  .footer-brand p {
+    max-width: 100%;
+    margin-bottom: 35px;
+  }
+
+
+  .footer-columns {
+    width: 100%;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 35px 25px;
+  }
+
+
+  .footer-bottom {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 25px;
+  }
+
+
+  .bottom-left {
+    flex-wrap: wrap;
+
+    gap: 20px 30px;
+  }
+
+
+  .bottom-center {
+    gap: 30px;
+  }
+
+}
+
+
+/* ================================
+   SMALL MOBILE
+================================ */
+
+@media (max-width: 480px) {
+
+  .footer {
+    padding: 35px 20px 20px;
+  }
+
+
+  .logo {
+    font-size: 26px;
+  }
+
+
+  .footer-columns {
+    grid-template-columns: 1fr;
+  }
+
+
+  .payment-container {
+    flex-wrap: wrap;
+  }
+
+
+  .footer-bottom {
+    font-size: 12px;
+  }
+
+}
