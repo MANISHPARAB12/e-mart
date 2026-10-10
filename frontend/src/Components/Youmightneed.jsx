@@ -21,14 +21,14 @@ const Youmightneed = () => {
   }, []);
 
   return (
-    <div className="padding">
+    <div className="px-15">
       <div className="random-products">
-        <div className="heading-container">
-          <h2>You Might need</h2>
+        <div className="heading-container flex justify-between">
+          <h2 className="font-bold text-2xl">You Might need</h2>
 
           <div className="grp">
-            <p className="sm">See more</p>
-            <FaArrowRight className="rightarrow" />
+            <p className="smx text-red-600">See more</p>
+            <FaArrowRight className="rightarrow text-red-600" />
           </div>
         </div>
 
@@ -56,3 +56,4 @@ const Youmightneed = () => {
 };
 
 export default Youmightneed;
+

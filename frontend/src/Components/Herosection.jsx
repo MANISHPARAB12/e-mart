@@ -4,11 +4,11 @@ import "../Css/HeroSection.css";
 import "../App.css";
 export const Herosection = () => {
   return (
-    <div className="padding">
+    <div className="px-15">
       <section className="hero">
         <div className="left-container">
           <div className="h1-container">
-            <h1>We bring the store to your door</h1>
+            <h1 className="text-4xl font-semibold">We bring the store to your door</h1>
           </div>
 
           <div className="p-container">
@@ -18,7 +18,7 @@ export const Herosection = () => {
             </p>
           </div>
 
-          <button className="shop-btn">Shop Now</button>
+          <button className="shop-btn font-semibold">Shop Now</button>
         </div>
 
         <div className="right-container">

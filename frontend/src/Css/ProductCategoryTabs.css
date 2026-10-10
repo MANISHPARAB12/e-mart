@@ -1,60 +1,139 @@
-.container{
-    display: flex;
-    height: 50px;
-    justify-content: center;
-    margin-top: 4rem;
-    /* margin: 10px; */
-    display: flex;
-    justify-content: space-center;   
-}
-.category-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-.category-container button {
-    height: 100px;
-    width: 200px;
-    margin: 10px;
+
+.category-container {
+  display: flex;
+  align-items: stretch;
+  gap: 15px;
+  width: 100%;
+  margin: 20px 0;
 }
 
-.viewallbtn button {
-    margin-top: 10px;
-    height: 100px;
-    width: 100px ;
-    background-color: rgb(144, 246, 97);
-    border: none;
-    line-height: 30px;
+/* Individual category cards */
+.category-container > button:not(.btn-view) {
+  flex: 1;
+  min-width: 0;
+  height: 90px;
+  padding: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 12px;
+
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-
-
-.circle {
-    background-color: white;
-    height: 50px;
-    width: 50px;
-    border-radius: 100%;
-    margin-left: 25px;
-}
-.arrow {
-    height: 20px;
-    width: auto;
-    margin-top:15px;
-    margin-left:-3px;
-    
-}
-button p {
-    margin-right: 80px;
-    font-weight: bold;
-    font-size: 15px;
+/* Hover effect */
+.category-container > button:not(.btn-view):hover {
+  border-color: #b8ed69;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
 }
 
+/* Category name */
+.category-container > button:not(.btn-view) p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #163b36;
+}
+
+/* Image wrapper */
 .img-span {
-    margin-left: 75px;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+/* Category image */
 .tab-img {
-    margin-top: -25px;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* See all button */
+.btn-view {
+  width: 75px;
+  min-width: 75px;
+  height: 90px;
+  padding: 8px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  background-color: #b8ed69;
+  border: 1px solid #b8ed69;
+  border-radius: 12px;
+
+  cursor: pointer;
+  color: #163b36;
+  font-size: 12px;
+}
+
+/* Arrow circle */
+.circle {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.arrow {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .category-container {
+    gap: 10px;
+  }
+
+  .category-container > button:not(.btn-view) {
+    padding: 8px;
+  }
+
+  .category-container > button:not(.btn-view) p {
+    font-size: 12px;
+  }
+
+  .img-span {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .category-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) 65px;
+    gap: 8px;
+  }
+
+  .category-container > button:not(.btn-view) {
+    height: 76px;
+  }
+
+  .btn-view {
+    width: 65px;
+    min-width: 65px;
+    height: 76px;
+  }
 }

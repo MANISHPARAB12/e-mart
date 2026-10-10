@@ -1,12 +1,16 @@
 import "../App.css";
+import { FaArrowRight } from "react-icons/fa";
 
 const FeatureStore = () => {
   return (
     <>
-      <div className="padding">
-        <div className="heading-container">
-          <h2 className="heading">Featured Store</h2>
-          <h4 className="vas">Visit all stores ➡️</h4>
+      <div className="px-15">
+        <div className="heading-container flex justify-between">
+          <h2 className="heading font-semibold text-2xl">Featured Store</h2>
+          <div className="grp">
+                      <p className="smx text-red-600">See more</p>
+                      <FaArrowRight className="rightarrow text-red-600" />
+                    </div>
         </div>
 
         <div className="div-container">

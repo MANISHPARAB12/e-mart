@@ -1,3 +1,4 @@
+
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -6,6 +7,7 @@ import "../Css/ProductCategoryTabs.css";
 
 function ProductCategoryTabs() {
   const [categories, setCategories] = useState([]);
+  const navigate = useNavigate();
 
   const categoryImages = {
     Fruits:
@@ -18,55 +20,55 @@ function ProductCategoryTabs() {
       "https://raw.githubusercontent.com/MANISHPARAB12/e-mart/main/images/beverages-product-categroy.png",
   };
 
-  const navigate = useNavigate();
-
   useEffect(() => {
-    axios.get("http://localhost:3000/products").then((res) => {
-      const uniqueCategories = [
-        ...new Set(res.data.map((item) => item.category)),
-      ];
-
-      setCategories(uniqueCategories);
-    });
+    axios
+      .get("http://localhost:3000/products")
+      .then((res) => {
+        const uniqueCategories = [
+          ...new Set(res.data.map((item) => item.category)),
+        ];
+        setCategories(uniqueCategories);
+      })
+      .catch((error) => console.error(error));
   }, []);
 
   return (
-    <div className="padding">
-      <div className="container">
-        <div className="category-container">
-          {categories.slice(0, 4).map((category) => (
-            <button key={category} onClick={() => navigate("/allCategory")}>
-              <p>{category}</p>
+    <div className="px-15">
+      <div className="category-container">
+        {categories.slice(0, 4).map((category) => (
+          <button
+            type="button"
+            key={category}
+            className="category-card"
+            onClick={() => navigate("/allCategory")}
+          >
+            <p>{category}</p>
 
-              <span className="img-span">
-                <img
-                  src={categoryImages[category]}
-                  alt={category}
-                  width={100}
-                  className="tab-img"
-                />
-              </span>
-            </button>
-          ))}
-        </div>
+            <span className="img-span">
+              <img
+                src={categoryImages[category]}
+                alt={category}
+                className="tab-img"
+              />
+            </span>
+          </button>
+        ))}
 
         {categories.length > 4 && (
-          <div className="viewallbtn">
-            <button
-              onClick={() => navigate("/allCategory")}
-              className="btn-view"
-            >
-              <div className="circle">
-                <img
-                  src="https://img.icons8.com/?size=100&id=85563&format=png&color=000000"
-                  alt=""
-                  srcset=""
-                  className="arrow"
-                />
-              </div>
-              See all
-            </button>
-          </div>
+          <button
+            type="button"
+            onClick={() => navigate("/allCategory")}
+            className="btn-view"
+          >
+            <span className="circle">
+              <img
+                src="https://img.icons8.com/?size=100&id=85563&format=png&color=000000"
+                alt=""
+                className="arrow"
+              />
+            </span>
+            <span>See all</span>
+          </button>
         )}
       </div>
     </div>

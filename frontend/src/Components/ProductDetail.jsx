@@ -40,7 +40,7 @@ const ProductDetail = () => {
           <button className="bwt">Buy with tamara</button>
         </div>
 
-              <br />
+             
 
         <div className="links">
           <button className="atw">

@@ -77,15 +77,14 @@
     left:25px;
     bottom:-35px;
 }
-.heading-container {
-    display: flex;
-    justify-content: space-between;
-}
+
 .heading {
     font-family:"Lexend", sans-serif;
-    margin-left: 80px;
+    
 }
 .vas {
     margin-right: 80px;
 }
 /* featured store css end */
+
+

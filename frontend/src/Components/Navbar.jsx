@@ -1,11 +1,10 @@
 // import React from "react";
 import "../Css/Navbar.css";
 import "../App.css";
-
 export const Navbar = () => {
   return (
-    <div className="padding">
-      <nav className="navbar">
+    <div className="padding mx-15">
+      <nav className="navbar bg-red-500">
         <div className="left">
           <i className="fa-solid fa-bars menu"></i>
 
@@ -20,7 +19,6 @@ export const Navbar = () => {
             type="text"
             placeholder="Search for Grocery, Stores, Vegetable or Meat"
           />
-
           <i className="fa-solid fa-magnifying-glass"></i>
         </div>
 

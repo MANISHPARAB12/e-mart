@@ -7,7 +7,7 @@ import ManImg from "../assets/manimg.png";
 export const Banner = () => {
   return (
     <>
-      <div className="padding">
+      <div className="px-15">
         <div className="MainContainer">
           <div className="txt-container">
             <div className="h2-container">

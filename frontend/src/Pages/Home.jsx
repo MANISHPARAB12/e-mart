@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import Wbsi from "../Components/Wbsi"
+
 import ProductCategoryTabs from "../Components/ProductCategoryTabs";
 // import {Card} from "../Components/Card";
 import { Herosection } from "../Components/Herosection";
@@ -12,12 +14,15 @@ import { Services } from "../Components/ServicesSection";
 import ProductDetail from "../Components/ProductDetail";
 import Membership from "../Components/Membership";
 
+import "../Components/Wbsi"
+
 function Home() {
   const [setSelectedCategory] = useState("");
 
   return (
     <>
-    
+    <div>
+
       <Herosection />
     
 
@@ -30,7 +35,8 @@ function Home() {
       
       <Youmightneed/>
       
-
+      
+      <Wbsi/>
 
       
       <FeatureStore/>
@@ -50,6 +56,7 @@ function Home() {
 
         <Services/>
       
+    </div>
       {/* <Card selectedCategory={selectedCategory} /> */}
     </>
   );
