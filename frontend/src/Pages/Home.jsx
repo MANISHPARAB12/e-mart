@@ -3,8 +3,9 @@ import { useState } from "react";
 import ProductCategoryTabs from "../Components/ProductCategoryTabs";
 // import {Card} from "../Components/Card";
 import { Herosection } from "../Components/Herosection";
-import Youmightneed from "../Components/Youmightneed";
 import FeatureStore from "../Components/FeaturedStore";
+import Youmightneed from "../Components/Youmightneed";
+import BestSellingItem from "../Components/BestSellingItem";
 import OfferCards from "../Components/OfferCards";
 import { Banner } from "../Components/AppPromotionBanner";
 import { Services } from "../Components/ServicesSection";
@@ -29,6 +30,7 @@ function Home() {
       
       
       <Youmightneed/>
+      <BestSellingItem/>
       
 
 
