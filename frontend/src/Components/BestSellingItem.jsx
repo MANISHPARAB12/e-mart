@@ -55,4 +55,4 @@ const BestSellingItem = () => {
   );
 };
 
-export default Youmightneed;
+export default BestSellingItem;

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import Wbsi from "../Components/Wbsi"
+import Wbsi from "../Components/Wbsi";
 
 import ProductCategoryTabs from "../Components/ProductCategoryTabs";
 // import {Card} from "../Components/Card";
@@ -15,50 +15,35 @@ import { Services } from "../Components/ServicesSection";
 import ProductDetail from "../Components/ProductDetail";
 import Membership from "../Components/Membership";
 
-import "../Components/Wbsi"
+import "../Components/Wbsi";
 
 function Home() {
   const [setSelectedCategory] = useState("");
 
   return (
     <>
-    <div>
+      <div>
+        <Herosection />
 
-      <Herosection />
-    
+        <ProductCategoryTabs setSelectedCategory={setSelectedCategory} />
 
-     
-      <ProductCategoryTabs
-        setSelectedCategory={setSelectedCategory}
-        />
-      
-      
-      
-      <Youmightneed/>
-      <BestSellingItem/>
-      
-      
-      <Wbsi/>
+        <Youmightneed />
+        <BestSellingItem />
 
-      
-      <FeatureStore/>
-      
-      <ProductDetail />
+        <Wbsi />
 
-      
-      <OfferCards className="home-offer-card" />
-      
-      
-      <Membership />
+        <FeatureStore />
 
-      
-        <Banner/>
-      
+        <ProductDetail />
 
+        <OfferCards className="home-offer-card" />
 
-        <Services/>
-      
-    </div>
+        <Membership />
+
+        <Banner />
+
+        <Services />
+      </div>
       {/* <Card selectedCategory={selectedCategory} /> */}
     </>
   );
